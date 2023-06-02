@@ -1,0 +1,64 @@
+
+.ListStyle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    padding: 40px;
+    justify-content: center;
+}
+.cardStyle{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+.StyleTitle{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;}
+
+  .StyleButton{
+    margin: 10px;
+  }
+  .StyleForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  
+  .StyleForm form {
+    width: 100vh;
+  }
+
+  .titleheading{
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 80px;
+    opacity: 0;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: appearText 1s forwards;
+    }
+
+    @keyframes appearText {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* .titleheading:hover{
+      scale: 1.1;    } */
+
+    
+  
+
+
+  
+

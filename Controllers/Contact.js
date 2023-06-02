@@ -16,9 +16,10 @@ exports.createContacts=async(req,res)=>{
 
         res.status(200).send({Msg : "User added",newContact})
     } catch (error) {
-        res.status(500).send("Could not add Contact")
+        res.status(500).send("Could not add Contacts")
     }
 }
+
 
 /* READ CONTACT */
 
@@ -32,20 +33,18 @@ exports.readContacts=async(req,res)=>{
     }
 }
 
+
 /* DELETE CONTACT */
 
 exports.deleteContacts=async(req,res)=>{
-
     try {
-
-        const{id}= req.params
+        const {id} = req.params
 
         await Contact.findByIdAndDelete(id)
 
-        res.status(200).send({Msg :"Contact deleted"})
-        
-        } catch (error) {
-        res.status(500).send("Could not delete Contact")
+        res.status(200).send({Msg : "Contact deleted"})
+    } catch (error) {
+        res.status(500).send("Could not delete contact")
     }
 }
 
@@ -54,7 +53,6 @@ exports.deleteContacts=async(req,res)=>{
 /* Update CONTACT */
 
 exports.updateContacts=async(req,res)=>{
-
     try {
         const {id}= req.params
 
@@ -69,13 +67,12 @@ exports.updateContacts=async(req,res)=>{
 /* GET ONE CONTACT */
 
 exports.getOneContacts=async(req,res)=>{
-
     try {
-        const {id}= req.params
+        const {id} = req.params
 
         const oneContact = await Contact.findById(id)
 
-        res.status(200).send({Msg : "Contact" , oneContact})
+        res.status(200).send({Msg : "Contact", oneContact})
     } catch (error) {
         res.status(500).send("Could not get contact")
     }
